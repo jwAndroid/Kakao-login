@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cankakaologin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+<!--    App클래스 application name 에 등록-->
+<!--    https://developers.kakao.com/ 에서 네이티브키 프로젝트에 등록 -->
+<!--    릴리즈 해시키 = > 카카오디벨로퍼에 등록 -->
+<!--    meta-data 추가-->
+<!--    코틀린으로 마이그레이션 진행해야함 문서참고-->
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity android:name=".subActivity" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
